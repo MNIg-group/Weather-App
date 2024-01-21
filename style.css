@@ -1,0 +1,145 @@
+:root {
+    --color__bg-primary: rgba(1, 17, 28, 0.99);
+    --color__bg-secondary: #E7F6FF;
+    --color__input: rgba(5, 36, 56, 0.91);
+    background-image: linear-gradient(to right, rgba(0, 0, 255, 0.748), rgba(255, 255, 255, 0.715), rgba(0, 0, 255, 0.71));
+    background-image: url('./assets/clouds.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    background-color: var(--color__bg-primary);
+    color: var(--color__bg-secondary);
+    padding: 2rem;
+    width: 40%;
+    margin: 4rem auto;
+    border-radius: 10px;
+}
+
+.weather__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    padding: .2rem .8rem;
+}
+
+input {
+    border: none;
+    background: var(--color__input);
+    outline: none;
+    color: var(--color__bg-secondary);
+    padding: .5rem 2.5rem;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: var(--color__bg-secondary);
+}
+
+.weather__search {
+    position: relative;
+}
+
+.weather__search i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 15px;
+    color: var(--color__bg-secondary);
+}
+
+.weather__units {
+    font-size: 1.5rem;
+}
+
+.weather__units button {
+    cursor: pointer;
+}
+
+.weather__units button:first-child {
+    margin-right: .5rem;
+}
+
+.weather__body {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.weather__datetime {
+    margin-bottom: 2rem;
+    font-size: 14px;
+}
+
+.weather__forecast {
+    background: var(--color__input);
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 30px;
+}
+
+.weather__icon img {
+    width: 100px;
+}
+
+.weather__temperature {
+    font-size: 1.75rem;
+}
+
+.weather__minmax {
+    display: flex;
+    justify-content: center;
+}
+
+.weather__minmax p {
+    font-size: 14px;
+    margin: .5rem;
+}
+
+.weather__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.weather__card {
+    display: flex;
+    align-items: center;
+    background: var(--color__input);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.weather__card i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.weather__card p {
+    font-size: 14px;
+}
+
+@media(max-width:936px) {
+    .container {
+        width: 90%;
+    }
+
+    .weather__header {
+        flex-direction: column;
+    }
+
+    .weather__units {
+        margin-top: 1rem;
+    }
+}
+
+@media(max-width:400px) {
+    .weather__info {
+        grid-template-columns: none;
+    }
+}
